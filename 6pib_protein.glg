@@ -1,0 +1,332 @@
+
+       _______________________________________________________
+
+__________//____________________________/////_________________/________
+_________/__/____________/_____________/______________/_______/________
+________/____/___________/_____________/______________________/________
+________/____/__/_____/_/////___/////__/__////_/_///__/__////_/________
+_______/______/_/_____/__/_____/_____/_/_____/_//___/_/_/____//________
+_______////////_/_____/__/_____/_____/_/_____/_/______/_/_____/________
+_______/______/_/____//__/___/_/_____/_/_____/_/______/_/____//________
+_______/______/__////_/___///___/////___/////__/______/__////_/________
+
+       _______________________________________________________
+
+                                ______
+                               /      \
+                              /        \
+                             /          \
+                             \    /\    /
+                              \  /  \  /
+                               \/ /\ \/
+                                 /  \
+                                /____\
+
+
+                ______________________________________ 
+               |                                      |
+               |            AutoGrid 4.2.7.x.2019-09-11         |
+               |                                      |
+               |        Garrett M. Morris, TSRI       |
+               |            Ruth Huey, TSRI           |
+               |        David S. Goodsell, TSRI       |
+               |         Arthur J. Olson, TSRI        |
+               |     (MODIFIED VERSION DUAL HB)       |
+               |                                      |
+               |        (C) 1989-2009, TSRI           |
+               |   The Scripps Research Institute     |
+               |______________________________________|
+
+                ______________________________________ 
+               |                                      |
+               | Calculation of van der Waals, H-Bond,|
+               |   Electrostatic Potential Energy, &  |
+               |   Desolvation Free Energy Grid Maps  |
+               |             for AutoDock             |
+               | For help, email autodock@scripps.edu |
+               |______________________________________|
+
+
+
+
+                           $Revision: 1.145 $
+Compilation parameters:  NUM_RECEPTOR_TYPES=20 NEINT=2048
+  AG_MAX_ATOMS=100000  MAX_MAPS=128 NDIEL=16384 MAX_ATOM_TYPES=126
+        e_vdW_Hb table has 32514048 entries of size 8
+Maximum number of maps that can be computed = 128 (defined by MAX_MAPS in "autocomm.h").
+  Non-bond cutoff for internal energy calculation (NBC): 8.00
+  Optimize internal energy scoring (USE_8A_NBCUTOFF):  yes
+  Faster search for nearby atoms (USE_BHTREE):  yes
+  Run calculations in parallel if possible (_OPENMP):  no
+This file was created at:			8:59 00" a.m., 12/24/2021
+                   using:			"Coffee-Lake"
+
+
+GPF> npts 40 40 40                        # num.grid points in xyz
+
+Number of grid points in x-direction:	41
+Number of grid points in y-direction:	41
+Number of grid points in z-direction:	41
+
+GPF> gridfld 6pib_protein.maps.fld        # grid_data_file
+
+Creating (AVS-readable) grid maps file : 6pib_protein.maps.fld
+
+Creating (AVS-readable) grid-coordinates extrema file : 6pib_protein.maps.xyz
+
+GPF> spacing 0.375                        # spacing(A)
+Grid Spacing :			0.375 Angstrom
+
+GPF> receptor_types A C NA OA N SA HD     # receptor atom types
+GPF> ligand_types A C F NA OA N S         # ligand atom types
+Allocated space for 10 gridmap objects
+1 CPU thread will be used for calculation
+
+Atom type names for ligand atom types 1-7 used for ligand-atom affinity grid maps:
+
+			Atom type number 0 corresponds to atom type name "A".
+			Atom type number 1 corresponds to atom type name "C".
+			Atom type number 2 corresponds to atom type name "F".
+			Atom type number 3 corresponds to atom type name "NA".
+			Atom type number 4 corresponds to atom type name "OA".
+			Atom type number 5 corresponds to atom type name "N".
+			Atom type number 6 corresponds to atom type name "S".
+
+
+GPF> receptor 6pib_protein.pdbqt          # macromolecule
+
+Receptor Input File :	6pib_protein.pdbqt
+
+Receptor Atom Type Assignments:
+
+
+Maximum partial atomic charge found = +0.665 e
+Minimum partial atomic charge found = -0.648 e
+
+Atom	Atom	Number of this Type
+Type	 ID 	 in Receptor
+____	____	___________________
+ 0	 A		   193
+ 1	 C		  1044
+ 2	 NA		     3
+ 3	 OA		   338
+ 4	 N		   345
+ 5	 SA		     8
+ 6	 HD		   407
+
+Total number of atoms :		2338 atoms 
+Total charge :			-6.93 e
+
+
+Receptor coordinates fit within the following volume:
+
+                   _______(30.4, -16.8, 18.4)
+                  /|     /|
+                 / |    / |
+                /______/  |
+                |  |___|__| Midpoint = (1.8, -39.6, -10.7)
+                |  /   |  /
+                | /    | /
+                |/_____|/
+(-26.7, -62.3, -39.9)      
+
+Maximum coordinates :		(30.356, -16.834, 18.414)
+Minimum coordinates :		(-26.737, -62.336, -39.908)
+
+
+GPF> gridcenter -11.026 -36.565 -4.881    # xyz-coordinates or auto
+
+Grid maps will be centered on user-defined coordinates:
+
+		(-11.026, -36.565, -4.881)
+
+Grid maps will cover the following volume:
+
+                   _______(-3.5, -29.1, 2.6)
+                  /|     /|
+                 / |    / |
+                /______/  |
+                |  |___|__| Midpoint = (-11.0, -36.6, -4.9)
+                |  /   |  /
+                | /    | /
+                |/_____|/
+(-18.5, -44.1, -12.4)      
+
+Grid map x-dimension :		15.0 Angstroms
+Grid map y-dimension :		15.0 Angstroms
+Grid map z-dimension :		15.0 Angstroms
+
+Maximum coordinates :		(-3.526, -29.065, 2.619)
+Minimum coordinates :		(-18.526, -44.065, -12.381)
+
+GPF> smooth 0.5                           # store minimum energy w/in rad(A)
+
+Potentials will be smoothed by: 0.500 Angstrom
+
+GPF> map 6pib_protein.A.map               # atom-specific affinity map
+
+Output Grid Map 1:   6pib_protein.A.map
+
+GPF> map 6pib_protein.C.map               # atom-specific affinity map
+
+Output Grid Map 2:   6pib_protein.C.map
+
+GPF> map 6pib_protein.F.map               # atom-specific affinity map
+
+Output Grid Map 3:   6pib_protein.F.map
+
+GPF> map 6pib_protein.NA.map              # atom-specific affinity map
+
+Output Grid Map 4:   6pib_protein.NA.map
+
+GPF> map 6pib_protein.OA.map              # atom-specific affinity map
+
+Output Grid Map 5:   6pib_protein.OA.map
+
+GPF> map 6pib_protein.N.map               # atom-specific affinity map
+
+Output Grid Map 6:   6pib_protein.N.map
+
+GPF> map 6pib_protein.S.map               # atom-specific affinity map
+
+Output Grid Map 7:   6pib_protein.S.map
+
+GPF> elecmap 6pib_protein.e.map           # electrostatic potential map
+
+Output Electrostatic Potential Energy Grid Map: 6pib_protein.e.map
+
+GPF> dsolvmap 6pib_protein.d.map              # desolvation potential map
+
+Output Desolvation Free Energy Grid Map: 6pib_protein.d.map
+
+GPF> dielectric -0.1465                   # <0, AD4 distance-dep.diel;>0, constant
+
+Using *distance-dependent* dielectric function of Mehler and Solmajer, Prot.Eng.4, 903-910.
+
+
+>>> Closing the grid parameter file (GPF)... <<<
+
+________________________________________________________________________________
+
+
+
+Calculating Pairwise Interaction Energies
+
+/usr/bin/autogrid4: WARNING:  Found an H-bonding atom with three bonded atoms, atom serial number 131
+
+
+
+/usr/bin/autogrid4: WARNING:  Found an H-bonding atom with three bonded atoms, atom serial number 132
+
+
+
+/usr/bin/autogrid4: WARNING:  Found an H-bonding atom with three bonded atoms, atom serial number 1062
+
+
+
+/usr/bin/autogrid4: WARNING:  Found an H-bonding atom with three bonded atoms, atom serial number 1063
+
+
+
+/usr/bin/autogrid4: WARNING:  Found an H-bonding atom with three bonded atoms, atom serial number 1068
+
+
+
+/usr/bin/autogrid4: WARNING:  Found an H-bonding atom with three bonded atoms, atom serial number 1068
+
+
+
+/usr/bin/autogrid4: WARNING:  Found an H-bonding atom with three bonded atoms, atom serial number 1069
+
+
+
+/usr/bin/autogrid4: WARNING:  Found an H-bonding atom with three bonded atoms, atom serial number 1069
+
+
+
+/usr/bin/autogrid4: WARNING:  Found an H-bonding atom with three bonded atoms, atom serial number 1975
+
+
+
+/usr/bin/autogrid4: WARNING:  Found an H-bonding atom with three bonded atoms, atom serial number 1976
+
+
+
+/usr/bin/autogrid4: WARNING:  Found an H-bonding atom with three bonded atoms, atom serial number 2245
+
+
+
+/usr/bin/autogrid4: WARNING:  Found an H-bonding atom with three bonded atoms, atom serial number 2246
+
+
+Beginning grid calculations.
+
+Calculating 9 grids over 68921 elements, around 2338 receptor atoms.
+
+                    Percent   Estimated Time  Time/this plane
+XY-plane  Z-coord   Done      Remaining       Real, User, System
+            /Ang              /sec            /sec
+________  ________  ________  ______________  __________________________
+
+    -20    -12.381     2.4%            1.04s  Real= 0.03,  CPU= 0.01,  System= 0.00
+    -19    -12.006     4.9%            0.98s  Real= 0.03,  CPU= 0.03,  System= 0.00
+    -18    -11.631     7.3%            0.95s  Real= 0.03,  CPU= 0.03,  System= 0.00
+    -17    -11.256     9.8%            0.89s  Real= 0.02,  CPU= 0.02,  System= 0.00
+    -16    -10.881    12.2%            0.94s  Real= 0.03,  CPU= 0.03,  System= 0.00
+    -15    -10.506    14.6%            0.91s  Real= 0.03,  CPU= 0.01,  System= 0.00
+    -14    -10.131    17.1%            0.88s  Real= 0.03,  CPU= 0.03,  System= 0.00
+    -13     -9.756    19.5%            0.86s  Real= 0.03,  CPU= 0.03,  System= 0.00
+    -12     -9.381    22.0%            0.90s  Real= 0.03,  CPU= 0.03,  System= 0.00
+    -11     -9.006    24.4%            0.90s  Real= 0.03,  CPU= 0.02,  System= 0.00
+    -10     -8.631    26.8%            0.96s  Real= 0.03,  CPU= 0.03,  System= 0.00
+     -9     -8.256    29.3%            0.90s  Real= 0.03,  CPU= 0.03,  System= 0.00
+     -8     -7.881    31.7%            0.90s  Real= 0.03,  CPU= 0.05,  System= 0.00
+     -7     -7.506    34.1%            0.92s  Real= 0.03,  CPU= 0.03,  System= 0.00
+     -6     -7.131    36.6%            0.91s  Real= 0.04,  CPU= 0.03,  System= 0.00
+     -5     -6.756    39.0%            0.88s  Real= 0.04,  CPU= 0.03,  System= 0.00
+     -4     -6.381    41.5%            0.82s  Real= 0.03,  CPU= 0.03,  System= 0.00
+     -3     -6.006    43.9%            0.81s  Real= 0.04,  CPU= 0.05,  System= 0.00
+     -2     -5.631    46.3%            0.73s  Real= 0.03,  CPU= 0.03,  System= 0.00
+     -1     -5.256    48.8%            0.67s  Real= 0.03,  CPU= 0.03,  System= 0.00
+      0     -4.881    51.2%            0.64s  Real= 0.03,  CPU= 0.03,  System= 0.00
+      1     -4.506    53.7%            0.61s  Real= 0.03,  CPU= 0.03,  System= 0.00
+      2     -4.131    56.1%            0.59s  Real= 0.03,  CPU= 0.03,  System= 0.00
+      3     -3.756    58.5%            0.54s  Real= 0.03,  CPU= 0.03,  System= 0.00
+      4     -3.381    61.0%            0.53s  Real= 0.03,  CPU= 0.03,  System= 0.00
+      5     -3.006    63.4%            0.48s  Real= 0.03,  CPU= 0.03,  System= 0.00
+      6     -2.631    65.9%            0.43s  Real= 0.03,  CPU= 0.03,  System= 0.00
+      7     -2.256    68.3%            0.39s  Real= 0.03,  CPU= 0.03,  System= 0.00
+      8     -1.881    70.7%            0.38s  Real= 0.03,  CPU= 0.03,  System= 0.00
+      9     -1.506    73.2%            0.34s  Real= 0.03,  CPU= 0.03,  System= 0.00
+     10     -1.131    75.6%            0.30s  Real= 0.03,  CPU= 0.03,  System= 0.00
+     11     -0.756    78.0%            0.26s  Real= 0.03,  CPU= 0.03,  System= 0.00
+     12     -0.381    80.5%            0.26s  Real= 0.03,  CPU= 0.03,  System= 0.00
+     13     -0.006    82.9%            0.21s  Real= 0.03,  CPU= 0.03,  System= 0.00
+     14      0.369    85.4%            0.19s  Real= 0.03,  CPU= 0.03,  System= 0.00
+     15      0.744    87.8%            0.15s  Real= 0.03,  CPU= 0.03,  System= 0.00
+     16      1.119    90.2%            0.12s  Real= 0.03,  CPU= 0.03,  System= 0.00
+     17      1.494    92.7%            0.09s  Real= 0.03,  CPU= 0.03,  System= 0.00
+     18      1.869    95.1%            0.06s  Real= 0.03,  CPU= 0.03,  System= 0.00
+     19      2.244    97.6%            0.03s  Real= 0.03,  CPU= 0.02,  System= 0.00
+     20      2.619   100.0%            0.00s  Real= 0.03,  CPU= 0.03,  System= 0.00
+
+Grid	Atom	Minimum   	Maximum
+Map 	Type	Energy    	Energy 
+		(kcal/mol)	(kcal/mol)
+____	____	_____________	_____________
+ 1	 A	   -0.81	 2.01e+05
+ 2	 C	   -0.91	 2.01e+05
+ 3	 F	   -0.62	 2.00e+05
+ 4	 NA	   -1.40	 2.00e+05
+ 5	 OA	   -1.62	 2.00e+05
+ 6	 N	   -0.94	 2.00e+05
+ 7	 S	   -1.12	 2.01e+05
+ 8	 e	   -4.46	 2.66e+00	Electrostatic Potential
+ 9	 d	    0.01	 1.53e+00	Desolvation Potential
+
+
+ * Note:  Every pairwise-atomic interaction was clamped at 100000.00
+
+
+/usr/bin/autogrid4: Successful Completion.
+Real= 3.70s,  CPU= 3.62s,  System= 0.03s

@@ -1,0 +1,23 @@
+##Using AutoDock4 forcefield####
+Validasi dengan menggunakan Re-Docking
+
+
+#Preparasi Protein
+1. Dipisahkan air dan ligannya terlebih dahulu menggunakan Biovia Discovery Studio
+2. Dilakukan penambahan Hidrogen dengan Edit-Add Hidrogen-All
+3. Edit tambahkan muatan gasteiger
+4. Edit-Hidrogen Merge Non Polar
+
+
+#Preparasi Ligand
+
+1. Dilakukan penambahan Hidrogen dengan Edit-Add Hidrogen-All
+2. Edit tambahkan muatan gasteiger
+3. Edit-Hidrogen Merge Non Polar
+
+
+### Perintah di terminal
+python.exe prepare_gpf.py -l 6pib_ligand.pdbqt -r 6pib_protein.pdbqt -y
+autogrid4 -p 6pib_protein.gpf -l 6pib_protein.glg
+vina2 --ligand 6pib_ligand.pdbqt --maps 6pib_protein --scoring ad4 --exhaustiveness 32 --out 6pib_ligand_ad4_out.pdbqt > log.txt
+vina_split.exe --input 6pib_ligand_ad4_out.pdbqt

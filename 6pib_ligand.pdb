@@ -1,0 +1,67 @@
+REMARK   Accelrys Discovery Studio PDB file
+REMARK   Created:  2021-12-24T08:52:46Z
+CRYST1  106.750  106.750   52.970  90.00  90.00 120.00 P3221      
+HETATM    1  C13 OKV A 303      -7.945 -36.925  -6.376  1.00 49.88           C  
+HETATM    2  C15 OKV A 303      -7.873 -34.539  -6.754  1.00 56.21           C  
+HETATM    3  C17 OKV A 303      -9.571 -35.872  -7.831  1.00 55.92           C  
+HETATM    4  C21 OKV A 303      -6.301 -32.582  -5.953  1.00 58.85           C  
+HETATM    5  C24 OKV A 303     -14.249 -37.545  -2.703  1.00 51.10           C  
+HETATM    6  C26 OKV A 303     -14.498 -37.907  -0.346  1.00 54.72           C  
+HETATM    7  C28 OKV A 303     -16.292 -36.608  -1.562  1.00 58.62           C  
+HETATM    8  C01 OKV A 303     -12.578 -38.771  -1.496  1.00 50.66           C  
+HETATM    9  C02 OKV A 303     -13.054 -38.243  -2.683  1.00 50.58           C  
+HETATM   10  C04 OKV A 303     -12.987 -38.112  -5.157  1.00 47.42           C  
+HETATM   11  C05 OKV A 303     -11.957 -37.871  -6.258  1.00 51.69           C  
+HETATM   12  C07 OKV A 303     -10.338 -39.240  -5.074  1.00 44.32           C  
+HETATM   13  C08 OKV A 303     -11.348 -39.509  -3.965  1.00 48.31           C  
+HETATM   14  C12 OKV A 303      -9.058 -37.015  -7.222  1.00 51.52           C  
+HETATM   15  C14 OKV A 303      -7.351 -35.692  -6.138  1.00 56.64           C  
+HETATM   16  C16 OKV A 303      -8.970 -34.623  -7.592  1.00 55.62           C  
+HETATM   17  C18 OKV A 303      -9.328 -33.244  -8.119  1.00 58.10           C  
+HETATM   18  C19 OKV A 303      -8.358 -32.295  -7.469  1.00 58.11           C  
+HETATM   19  C23 OKV A 303      -6.032 -31.076  -6.009  1.00 52.50           C  
+HETATM   20  C25 OKV A 303     -14.972 -37.379  -1.535  1.00 53.61           C  
+HETATM   21  C27 OKV A 303     -13.301 -38.604  -0.325  1.00 55.67           C  
+HETATM   22  F29 OKV A 303     -16.039 -35.304  -1.618  1.00 60.82           F  
+HETATM   23  F30 OKV A 303     -16.987 -36.882  -0.461  1.00 66.37           F  
+HETATM   24  F31 OKV A 303     -16.997 -36.967  -2.632  1.00 57.87           F  
+HETATM   25  N03 OKV A 303     -12.327 -38.405  -3.866  1.00 52.74           N  
+HETATM   26  N06 OKV A 303     -10.999 -38.959  -6.336  1.00 54.64           N  
+HETATM   27  N20 OKV A 303      -7.440 -33.108  -6.679  1.00 58.72           N  
+HETATM   28  O10 OKV A 303      -8.790 -39.658  -7.447  1.00 58.03           O  
+HETATM   29  O11 OKV A 303     -10.441 -38.642  -8.853  1.00 49.45           O  
+HETATM   30  O22 OKV A 303      -5.596 -33.303  -5.331  1.00 54.84           O  
+HETATM   31  S09 OKV A 303      -9.823 -38.628  -7.525  1.00 49.23           S  
+TER      32      OKV A 303 
+CONECT    1   14   15
+CONECT    2   15   16   27
+CONECT    3   14   16
+CONECT    4   19   27   30
+CONECT    5    9   20
+CONECT    6   20   21
+CONECT    7   20   22   23   24
+CONECT    8    9   21
+CONECT    9    5    8   25
+CONECT   10   11   25
+CONECT   11   10   26
+CONECT   12   13   26
+CONECT   13   12   25
+CONECT   14    1    3   31
+CONECT   15    1    2
+CONECT   16    2    3   17
+CONECT   17   16   18
+CONECT   18   17   27
+CONECT   19    4
+CONECT   20    5    6    7
+CONECT   21    6    8
+CONECT   22    7
+CONECT   23    7
+CONECT   24    7
+CONECT   25    9   10   13
+CONECT   26   11   12   31
+CONECT   27    2    4   18
+CONECT   28   31
+CONECT   29   31
+CONECT   30    4
+CONECT   31   14   26   28   29
+END
