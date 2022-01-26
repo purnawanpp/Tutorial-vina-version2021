@@ -46,6 +46,7 @@ center_z = 0.078
 size_x = 40
 size_y = 40
 size_z = 40
+5.  Example grix.txt https://github.com/purnawanpp/redocking-6pib/blob/main/grid.txt
 
 ### For Docking/Redocking Test compound using Vina forcefield write this command in terminal
 1. vina --receptor 6pib_protein.pdbqt --ligand 6pib_ligand.pdbqt --config grid.txt --exhaustiveness=8 --out 6pib_ligand_vina_out.pdbqt > results.txt
