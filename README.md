@@ -1,8 +1,5 @@
 ## Redocking-6pib (English Version) 
-redocking 6pib using autodock vina new version in OS Windows 10 (2021)
-
-## Using Vina forcefield
-Validation using Re-Docking
+Using Vina forcefield, redocking 6pib using autodock vina new version in OS Windows 10 (2021)
 
 ## PATH settings
 1. Installing Mgl tools 1.5.6 find python.exe in the folder and make the path
@@ -54,7 +51,7 @@ size_z = 40
 1. vina --receptor 6pib_protein.pdbqt --ligand 6pib_ligand.pdbqt --config grid.txt --exhaustiveness=8 --out 6pib_ligand_vina_out.pdbqt > results.txt
 2. vina_split --input 6pib_ligand_vina_out.pdbqt
 
-## Redocking-6pib (Bahasa Indonesia) 
+## Redocking-6pib, Using Vina forcefield (Bahasa Indonesia) 
 
 ## Pengaturan PATH
 1. Instalasi Mgl tools 1.5.6 cari python.exe di foldernya dan jadikan path
