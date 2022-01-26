@@ -53,8 +53,8 @@ size_z = 40
 ### For Docking/Redocking Test compound using Vina forcefield write this command in terminal
 1. vina --receptor 6pib_protein.pdbqt --ligand 6pib_ligand.pdbqt --config grid.txt --exhaustiveness=8 --out 6pib_ligand_vina_out.pdbqt > results.txt
 2. vina_split --input 6pib_ligand_vina_out.pdbqt
-## Using Vina forcefield
-Validasi dengan menggunakan Re-Docking
+
+## Redocking-6pib (Bahasa Indonesia) 
 
 ## Pengaturan PATH
 1. Instalasi Mgl tools 1.5.6 cari python.exe di foldernya dan jadikan path
