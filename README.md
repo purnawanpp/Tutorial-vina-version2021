@@ -2,8 +2,8 @@
 Using Vina forcefield, redocking 6pib using autodock vina new version in OS Windows 10 (2021)
 
 ## PATH settings
-1. Installing Mgl tools 1.5.6 find python.exe in the folder and make the path
-2. Installing ADFR Windows version make the path /bin because there is autogrid4
+1. Installing Mgl tools 1.5.7 https://ccsb.scripps.edu/download/262/ and find python.exe in the folder installation and make the path
+2. Installing ADFR Windows version make the path /bin because there is "autogrid4.exe" for software adfr you can download https://ccsb.scripps.edu/adfr/download/1067/
 3. Download vina https://github.com/ccsb-scripps/AutoDock-Vina/releases/download/v1.2.3/vina_1.2.3_windows_x86_64.exe and rename vina_1.2.3_windows_x86_64.exe to vina.exe
 4. Input vina.exe in your path 
 
