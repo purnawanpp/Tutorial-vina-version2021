@@ -30,6 +30,7 @@ Using Vina forcefield, redocking 6pib using autodock vina new version in OS Wind
 6. Select ligand.pdb
 7. ligand-Toorsion tree-detect root
 8. ligand-output-save as ligand.pdbqt
+9. Save prepare_gpf.py in your folder work, you can download from this link https://github.com/ccsb-scripps/AutoDock-Vina/blob/develop/example/autodock_scripts/prepare_gpf.py
 
 ### Command in terminal to find Grid Box using Autogrid, don't forget to save _prepare_gpf.py_ https://github.com/purnawanpp/Tutorial-vina-version2021/blob/main/prepare_gpf.py in your folder file pdbqt 
 python.exe prepare_gpf.py -l 6pib_ligand.pdbqt -r 6pib_protein.pdbqt -y
@@ -82,6 +83,7 @@ size_z = 40
 6. Pilih ligand.pdb
 7. ligand-Toorsion tree-detect root
 8. ligand-output-save as ligand.pdbqt
+9. Save prepare_gpf.py in your folder work, you can download from this link https://github.com/ccsb-scripps/AutoDock-Vina/blob/develop/example/autodock_scripts/prepare_gpf.py
 
 ### Perintah di terminal untuk mengetahui Grid Box menggunakan Autogrid
 python.exe prepare_gpf.py -l 6pib_ligand.pdbqt -r 6pib_protein.pdbqt -y
