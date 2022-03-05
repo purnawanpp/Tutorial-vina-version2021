@@ -33,8 +33,8 @@ Using Vina forcefield, redocking 6pib using autodock vina new version in OS Wind
 9. Save prepare_gpf.py in your folder work, you can download from this link https://github.com/ccsb-scripps/AutoDock-Vina/blob/develop/example/autodock_scripts/prepare_gpf.py
 
 ### Command in terminal to find Grid Box using Autogrid, don't forget to save _prepare_gpf.py_ https://github.com/purnawanpp/Tutorial-vina-version2021/blob/main/prepare_gpf.py in your folder file pdbqt 
-python.exe prepare_gpf.py -l 6pib_ligand.pdbqt -r 6pib_protein.pdbqt -y
-autogrid4 -p 6pib_protein.gpf -l 6pib_protein.glg
+1. python.exe prepare_gpf.py -l 6pib_ligand.pdbqt -r 6pib_protein.pdbqt -y
+2. autogrid4 -p 6pib_protein.gpf -l 6pib_protein.glg
 
 ## Create the GridBox File
 1. Open the file with 6pib_protein.gpf
